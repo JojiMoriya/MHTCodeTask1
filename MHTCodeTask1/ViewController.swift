@@ -27,6 +27,14 @@ class ViewController: UIViewController {
         print("Viewを表示しました")
     }
     
+    override func viewWillLayoutSubviews() {
+        print("Viewを配置します")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        print("Viewを配置しました")
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         print("Viewを消します")
     }
@@ -35,6 +43,9 @@ class ViewController: UIViewController {
         print("Viewを消しました")
     }
 
-
+    @IBAction func chengeLayout(_ sender: UIButton) {
+        self.view.bounds = CGRect(x: 50, y: 50, width: 500, height: 500)
+    }
+    
 }
 
